@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nosso Futuro Juntos</title>
+  <meta name="theme-color" content="#170a0f">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Nosso Amor">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Dancing+Script:wght@600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="futuro.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body class="has-tabbar">
+  <div class="container">
+    <header>
+      <h1>Nosso Futuro 💖</h1>
+      <h2>Planos, Sonhos e Promessas Eternas</h2>
+    </header>
+
+    <main>
+      <section class="sonhos">
+        <h3>✨ Sonhos que vamos viver lado a lado ✨</h3>
+        <ul>
+          <li>🌍 Descobrir o mundo de mãos dadas</li>
+          <li>🏡 Construir um lar cheio de risos, cheiros e carinho</li>
+          <li>👨‍👩‍👧‍👦 Formar uma família com amor em cada detalhe</li>
+          <li>👵👴 Envelhecer com serenidade, olhando tudo o que vivemos</li>
+        </ul>
+      </section>
+
+      <section class="promessa">
+        <h3>💌 Minha promessa para você</h3>
+        <p>
+          Prometo estar ao seu lado em cada passo da nossa jornada. Prometo cuidar de você, te ouvir, te apoiar e te amar com todo o meu coração. O futuro é nosso, e será lindo porque estaremos juntos.
+        </p>
+      </section>
+
+      <section class="fotos">
+        <h3>📸 Nossas memórias mais lindas</h3>
+        <!-- Nomes sem acento/cedilha: use alianca1.jpg e alianca2.jpg dentro da pasta img2/ -->
+        <img src="img2/alianca1.jpg" alt="Aliança representando nosso amor" loading="lazy">
+        <img src="img2/alianca2.jpg" alt="Outra aliança representando nosso compromisso" loading="lazy">
+      </section>
+
+      <section class="video">
+        <h3>🎥 Um pedacinho da nossa história</h3>
+        <div class="video-container">
+          <video controls playsinline preload="metadata">
+            <source src="amor.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
+        </div>
+      </section>
+
+      <section class="links-importantes">
+        <div class="botao-centralizado">
+          <a href="https://photos.google.com/share/AF1QipPDerQSD5XcrMN8rCNR_wGhUq75jdzcdjynVq0ITuGmWAH1IAqF5aCDnEMn50s_yg?key=dGVHR0xMOXpKSFR1UEdYYXYzVzNqVFRlQU10QjVB"
+             target="_blank" rel="noopener noreferrer" class="botao-link">
+            Ver Álbum de Fotos 💞
+          </a>
+        </div>
+
+        <div class="botao-centralizado">
+          <a href="teste1.html" class="botao-link">Nosso chat do amor 💞</a>
+        </div>
+
+        <div class="voltar">
+          <a href="index.html" class="botao-voltar">← Voltar para o Início</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="assinatura">Feito com todo o meu amor por você 💘</p>
+    </footer>
+  </div>
+
+  <nav class="tabbar" aria-label="Navegação principal">
+    <a href="index.html"><span class="ico">🏠</span>Início</a>
+    <a href="futuro.html" aria-current="page"><span class="ico">💍</span>Futuro</a>
+    <a href="teste1.html"><span class="ico">💬</span>Chat</a>
+  </nav>
+
+  <script>
+    // Se alguma foto das alianças ainda não foi enviada, esconde em vez de mostrar ícone quebrado
+    (function () {
+      var secao = document.querySelector('.fotos');
+      var imgs = Array.prototype.slice.call(secao.querySelectorAll('img'));
+      function checar() {
+        if (imgs.every(function (i) { return i.hidden; })) secao.hidden = true;
+      }
+      imgs.forEach(function (img) {
+        img.addEventListener('error', function () { img.hidden = true; checar(); });
+        if (img.complete && img.naturalWidth === 0) { img.hidden = true; checar(); }
+      });
+    })();
+  </script>
+</body>
+</html>

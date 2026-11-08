@@ -1,0 +1,35 @@
+NOSSO AMOR — site + aplicativo de celular (PWA)
+
+COMO SUBIR NO GITHUB (substitui o que está lá)
+  1. Extraia este .zip.
+  2. No repositório, envie TODOS os arquivos e as pastas (icons/ e img/).
+     As fotos 1.jpg a 6.jpg precisam ficar DENTRO da pasta img/.
+  3. Pode apagar do repositório as fotos antigas que ficaram soltas na raiz
+     (1.jpg ... 6.jpg) e o arquivo "_gitkeep".
+  4. O vídeo amor.mp4 continua onde já está (mesma pasta do index.html).
+  5. Fotos das alianças: crie a pasta img2/ e coloque alianca1.jpg e alianca2.jpg
+     (sem acento e sem ç no nome). Enquanto não existirem, essa seção fica escondida.
+
+COMO INSTALAR NO CELULAR (precisa abrir o site por https, ex.: GitHub Pages)
+  Android (Chrome): aparece o aviso "Instalar" no site; ou menu ⋮ > Instalar app.
+  iPhone (Safari):  botão Compartilhar > Adicionar à Tela de Início.
+
+QUANDO TROCAR FOTOS OU ARQUIVOS
+  Abra sw.js e aumente o número da linha:  const VERSAO = 'v2';  ->  'v3'
+  Assim o app instalado baixa a versão nova.
+
+ARQUIVOS
+  index.html / index.css / index.js / carrosel.js   página inicial
+  editor-fotos.js                                   botão "Editar fotos" (trocar fotos no próprio celular)
+  futuro.html / futuro.css                          página "Nosso Futuro"
+  teste1.html / teste2.css / teste3.js              Chat do Amor
+  app.css / app.js                                  barra inferior e instalação do app
+  manifest.webmanifest / sw.js / icons/             o que transforma o site em aplicativo
+  img/                                              fotos do carrossel (1.jpg a 6.jpg)
+
+OBS.: o histórico do chat fica salvo só no aparelho de quem usa.
+
+EDITAR FOTOS PELO SITE
+  Na página inicial, toque em "Editar fotos": dá para adicionar, remover e mudar a ordem.
+  As mudanças ficam salvas SÓ NAQUELE APARELHO (não aparecem no celular dela).
+  Para trocar as fotos para todo mundo: substitua img/1.jpg ... no GitHub e aumente a VERSAO do sw.js.

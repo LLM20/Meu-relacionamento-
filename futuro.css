@@ -1,0 +1,165 @@
+:root {
+    --wine-deep: #170a0f;
+    --wine-card: #2b1420;
+    --gold: #cda25f;
+    --gold-soft: #e8cd97;
+    --rose: #e6a2b5;
+    --rose-deep: #b8546c;
+    --cream: #f5ead9;
+    --muted: #c9a6ab;
+}
+
+body {
+    background-color: var(--wine-deep);
+    background-image: radial-gradient(circle at 50% 0%, #2c1420 0%, #170a0f 65%);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.botao-link {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--rose-deep), var(--rose));
+    color: var(--wine-deep);
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05em;
+    box-shadow: 0 4px 16px rgba(184, 84, 108, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 15px auto;
+}
+
+.botao-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(184, 84, 108, 0.55);
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background: linear-gradient(180deg, #1f0f18, transparent);
+    color: var(--gold-soft);
+}
+
+h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3em);
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 0 18px rgba(205, 162, 95, 0.35);
+}
+
+h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--rose);
+    font-style: italic;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: '💕 ';
+    padding-left: 24px;
+}
+
+ul li {
+    font-size: 1.25em;
+    margin: 10px 0;
+    color: var(--cream);
+}
+
+section {
+    margin: 50px 20px;
+    text-align: center;
+}
+
+section img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(205, 162, 95, 0.25);
+    margin: 20px auto;
+}
+
+.video-container video {
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(205, 162, 95, 0.25);
+}
+
+.botao-voltar {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--rose-deep), var(--rose));
+    color: var(--wine-deep);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05em;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(184, 84, 108, 0.4);
+    text-align: center;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(184, 84, 108, 0.55);
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.95em;
+    font-style: italic;
+    color: var(--muted);
+    padding-bottom: 30px;
+}
+
+.assinatura {
+    font-family: 'Dancing Script', cursive;
+    font-style: normal;
+    font-size: 1.6em;
+    color: var(--gold-soft);
+    text-shadow: 0 0 14px rgba(205, 162, 95, 0.4);
+}
+
+/* ---------- Correções e ajustes ---------- */
+[hidden] { display: none !important; }
+
+.container { max-width: 800px; margin: 0 auto; }
+
+.promessa p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.25em;
+    line-height: 1.7;
+    color: var(--cream);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 70%;
+    max-width: 360px;
+    height: auto;
+    background: #000;
+}
+
+.botao-centralizado,
+.voltar {
+    text-align: center;
+}
+
+.voltar { margin-top: 20px; }
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
